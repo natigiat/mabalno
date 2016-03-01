@@ -1,0 +1,25 @@
+name = Features menu
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_custom][] = main-menu
+features[menu_links][] = main-menu_about-us:node/3
+features[menu_links][] = main-menu_alerts:node/38
+features[menu_links][] = main-menu_blog:blog
+features[menu_links][] = main-menu_column-3:portfolio/column_three
+features[menu_links][] = main-menu_column-4:portfolio/column_four
+features[menu_links][] = main-menu_contact-us:node/1
+features[menu_links][] = main-menu_home:<front>
+features[menu_links][] = main-menu_pages:<front>
+features[menu_links][] = main-menu_portfolio:portfolio
+features[menu_links][] = main-menu_pricing-tables:node/39
+features[menu_links][] = main-menu_typography:node/37
+
+; Information added by Drupal.org packaging script on 2016-02-17
+version = "7.x-1.4"
+core = "7.x"
+project = "multipurpose_corporate_profile"
+datestamp = "1455698941"
+

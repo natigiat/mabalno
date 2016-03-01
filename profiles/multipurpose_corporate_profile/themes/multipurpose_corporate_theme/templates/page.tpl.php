@@ -92,7 +92,7 @@
  */
 ?>
 <div id="page-wrapper">
-  <div id="page" class="container <?php print $classes; ?>">
+  <div id="page" class="<?php print $classes; ?>">
 
     <!-- !Leaderboard Region -->
     <?php print render($page['leaderboard']); ?>

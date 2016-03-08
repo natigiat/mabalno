@@ -214,3 +214,23 @@ ul.inline:after {
 *:first-child + html .clearfix {
   min-height: 1%;
 }
+
+
+
+/*//fix for multy edit nati edit*/
+.views-field-field-yad2-contacts-editable .field-name-field-yad2-name {
+    float: left;
+    width: 30%;
+}
+
+.views-field-field-yad2-contacts-editable .content .field-label , .views-field-field-yad2-contacts-editable span.fieldset-legend , .views-field-field-yad2-contacts-editable .container-inline {
+    float: left;
+}
+
+.field.field-name-field-yad2-image.field-type-image.field-label-above {
+    display: none;
+}
+
+.views-field-field-yad2-contacts-editable input {
+    width: 150px;
+}

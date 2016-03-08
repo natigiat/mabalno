@@ -200,7 +200,7 @@
 
             <!-- !Main Content -->
             <?php if ($content = render($page['content'])): ?>
-              <div id="content" class="region col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3  col-xs-12">
+              <div id="content" class="region col-sm-12  col-lg-12  col-xs-12">
                 <?php print $content; ?>
               </div>
             <?php endif; ?>

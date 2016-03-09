@@ -201,6 +201,9 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
     border-bottom: 1px solid #D0CCCC;
 }
 
+.views-widget-filter-title{
+	 border-bottom: none;
+}
 .views-exposed-widget.views-submit-button , .views-exposed-widget.views-widget-sort-order{
     display: none;
 }

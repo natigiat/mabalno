@@ -73,9 +73,9 @@
  * @ingroup templates
  */
 ?>
-<header id="navbar" role="banner" class="">
+<header id="navbar" role="banner" class="" dir="rtl">
   <div class="col-sm-12 nav-maba no-padding">
-    <div class="navbar-header pull-right">
+    <div class="navbar-header pull-left">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -99,7 +99,7 @@
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse no-padding">
         <nav role="navigation">
-          <div class="pull-left">
+          <div class="pull-right">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
@@ -118,7 +118,7 @@
   </div>
 </header>
 
-<div class="main-container">
+<div class="main-container" >
 
   <header role="banner" id="page-header col-sm-12">
     <?php if (!empty($site_slogan)): ?>

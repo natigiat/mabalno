@@ -22,9 +22,14 @@ a {
 
 
 .nav-maba{ border-bottom: 1px solid #dce0e0;height: 61px}
-.navbar-brand{border-right: 1px solid #dce0e0;height: 61px;color: #FF5A5F;font-family: initial;}
+.navbar-brand{border-right: 1px solid #dce0e0;height: 61px;color: #FF5A5F;font-family: initial; line-height: 2;}
 .navbar-nav li{border-left: 1px solid #dce0e0;height: 61px;}
 .navbar-nav li a{    line-height: 4.4!important; padding: 0px 25px; padding-bottom: 0px!important;}
+
+.dropdown-menu .navbar-nav li a{
+ line-height: 1.4!important; padding: 0px 0px; padding-bottom: 0px!important;
+
+}
 
 .no-padding {
     padding: 0px!important;
@@ -116,7 +121,7 @@ div#modalContent {
 .map-marker div.icon {
     position: relative;
     background-color: #ff5a5f;
-    width: 30px;
+    width: 44px;
     height: 25px;
     border: 1px solid;
     line-height: 24px;
@@ -124,6 +129,7 @@ div#modalContent {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
     border-radius: 4px;
     color: #fff;
+    left: -8px;
 }
 
 img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
@@ -201,9 +207,6 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
     border-bottom: 1px solid #D0CCCC;
 }
 
-.views-widget-filter-title{
-	 border-bottom: none;
-}
 .views-exposed-widget.views-submit-button , .views-exposed-widget.views-widget-sort-order{
     display: none;
 }
@@ -289,4 +292,127 @@ ul.nav li.dropdown ul.dropdown-menu {
 
 a.active {
 	color: #FF5A5F;
+}
+
+.logo img {
+   padding: 0px 0px 0px 15px;
+}
+
+
+.main-profile-user a.dropdown-toggle {
+    background-image: url(http://dev.mabalno.org/sites/default/files/menuimage/original.jpg);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 71px;
+}
+
+.main-profile-user.dropdown {
+        padding: 0px 0px 0px 0px;
+}
+
+.navbar-nav {
+    padding: 0px;
+}
+
+.navbar-nav .dropdown {
+    line-height: 4.4!important;
+    padding: 0px 25px;
+    padding-bottom: 0px!important;
+}
+
+.not-front .main-container {
+    margin-top: 30px;
+}
+
+
+/*node add*/
+.node-yad2-form label {
+    display: none;
+}
+
+.node-yad2-form div#geolocation-help-101-0 {
+    /*display: none;*/
+}
+
+.node-yad2-form span#geolocation-address-geocode-101-0, .node-yad2-form div#geolocation-remove-101-0 , .node-yad2-form #geolocation-lat-item-101-0, .node-yad2-form .geolocation-lng-item{
+ display: none!important;
+}
+
+.node-yad2-form .panel-pane {
+    float: right;
+    width: 100%;
+}
+
+select {
+    padding: 15px 19px;
+    background: #fff;
+    margin: 0px 0px 0px 23px;
+}
+
+.node-yad2-form legend.panel-heading {
+    display: none;
+}
+
+.panel-body {
+    background: whitesmoke!important;
+}
+
+.node-yad2-form input {
+    border: 1px solid darkgrey!important;
+}
+
+textarea#edit-field-yad2-explain-und-0-value{
+	height:160px;
+}
+
+.breadcrumb{
+	display:none;
+}
+
+
+/*register page*/
+.reg-page .row {
+    margin-top: 110px;
+}
+
+.reg-page li {
+    float: right;
+}
+
+.reg-page .breadcrumb {
+	display:none;
+}
+
+.reg-page .nav-tabs {
+   padding:0px!important;
+}
+
+.reg-page form#user-pass {
+    padding: 38px 0px;
+}
+
+
+/*user region */
+.box-headline {
+    background-color: #FFFFFF;
+    padding: 13px;
+    font-size: 20px;
+}
+
+.view-id-user_active {
+    background: white;
+}
+
+.view-id-user_active .views-field-title a {
+    font-size: 16px;
+    font-weight: 700;
+    float: right;
+}
+
+.view-id-user_active .views-row{
+	padding:20px;
+}
+
+.view-id-user_active th {
+    text-align: right;
 }

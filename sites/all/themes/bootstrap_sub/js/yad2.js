@@ -103,17 +103,12 @@ Drupal.behaviors.mapMain = {
 		    }).resize(); // This will simulate a resize to trigger the initial run.
 
 
-            //fix layout
-            jQuery('.views-exposed-widget').find('.form-type-bef-link').addClass('custom-button');
-            jQuery('.ctools-auto-submit-processed').attr('placeholder', 'חפש מוצר');
-            jQuery('.ctools-auto-submit-processed').on('focus', function(event) {
-            	jQuery(this).attr('placeholder', '');	
-            });
+			// map.on('zoomend', onMapzoom);
 
-            jQuery('.ctools-auto-submit-processed').on('blur', function(event) {
-            	jQuery(this).attr('placeholder', 'חפש מוצר');	
-            });
-
+   //          function onMapzoom(e) {
+	  //         var zoom = map.getZoom();
+   //            console.log(zoom);
+	  //       }
 
 
 		}

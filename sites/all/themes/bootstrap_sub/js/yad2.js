@@ -18,7 +18,6 @@ Drupal.behaviors.mapMain = {
 		           var price = jQuery(this).find(".views-field-field-yad2-price-1").find(".field-content").text();
 		           var nid = jQuery(this).find(".views-field-nid").text();
 				   
-				   jQuery('.views-field-field-yad2-loca')
 		           // get locations
 				   var cor = jQuery(this).find(".views-field-field-yad2-loca").text();
 				   var cor = cor.split(",");
@@ -35,6 +34,15 @@ Drupal.behaviors.mapMain = {
 				   jQuery(this).find('.waze').attr('latitude' , one);
 				   jQuery(this).find('.waze').attr('longitude', two);
 
+				   // console.log(one);
+				   // if(one.length < 3){
+				   // 	 console.log("in");
+				   // 	 one = 31.79239138817601;
+				   // 	 two = 35.14869689941406;
+				   // 	 prcie = "אין פריטים"
+				   // 	 data.push({iconclass: price, lat: one, lon: two});
+				   // }
+
 		           data.push({iconclass: price, nid:nid , lat: one, lon: two});
 		          
 				});
@@ -42,7 +50,7 @@ Drupal.behaviors.mapMain = {
 	        }
 	        
 	        getData();
-	        console.log(data);
+	        // console.log(data);
 
 	       
 
@@ -82,11 +90,32 @@ Drupal.behaviors.mapMain = {
 
 			});
           
-
+            
+            //center to location and show background on location
             jQuery('.view-yad2').find(".view-content").find(".views-row").on('hover',  function(event) {
 		 	    var nid = jQuery(this).find(".views-field-nid").text();
 		 	    jQuery('.leaflet-marker-pane').find('.icon[nid="'+nid+'"]').toggleClass('iconhover');
 		 	    jQuery('.leaflet-marker-pane').find('.icon[nid="'+nid+'"]').next('.arrow').toggleClass('iconhoverArrow');
+
+
+		 	    // get locations
+				   var cor = jQuery(this).find(".views-field-field-yad2-loca").text();
+				   var cor = cor.split(",");
+
+				   var one=cor[0];
+				   var two=cor[1];
+				   one = one.replace("Geolocation", "");
+				   one = one.replace("is", "");
+
+				   one = one.replace(/\s+/g, '');
+				   two = two.replace(/\s+/g, '');
+
+				   // console.log( one ,  two);
+				   jQuery(this).find('.waze').attr('latitude' , one);
+				   jQuery(this).find('.waze').attr('longitude', two);
+
+
+				   map.panTo(new L.LatLng(one, two));
 		 	
 		    });      
 
@@ -101,7 +130,22 @@ Drupal.behaviors.mapMain = {
 		        	jQuery('#yad2').find('.view-yad2').removeClass('full-width');
 		        }
 		    }).resize(); // This will simulate a resize to trigger the initial run.
+          
 
+            //show page view ifram on map
+            //
+            jQuery('.views-field-title').on('click', function(event) {
+            	event.preventDefault();
+            	var nid = jQuery(this).find('a').attr('href');
+            	console.log(nid);
+            	jQuery('#map').css('display', 'none');
+            	if(jQuery('#iframeId').length){ 
+                   jQuery('#iframeId').attr('src', nid);
+            	}else{
+            	   jQuery('.control-label').append(' <iframe frameborder="0" id="iframeId" name="iframeId" src="'+nid+'" ></iframe>');
+            	}
+           	
+            });
 
 			// map.on('zoomend', onMapzoom);
 

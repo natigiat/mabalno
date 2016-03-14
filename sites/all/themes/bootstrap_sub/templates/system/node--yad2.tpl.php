@@ -79,7 +79,7 @@
  * @ingroup templates
  */
 ?>
-<article dir="rtl" id="node-<?php print $node->nid; ?>" class="col-sm-8 col-sm-offset-2 <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article dir="rtl" id="node-<?php print $node->nid; ?>" class="col-sm-12  <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
   <header>
     <?php print render($title_prefix); ?>

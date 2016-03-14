@@ -1,0 +1,16 @@
+.privatemsg-list th{
+text-align: right;
+}
+
+.messages ul.action-links {
+    display: none;
+}
+
+.messages select {
+    width: 30%;
+    float: right;
+}
+
+div#privatemsg-list-form {
+    padding: 25px 0px;
+}

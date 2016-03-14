@@ -129,7 +129,8 @@ div#modalContent {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
     border-radius: 4px;
     color: #fff;
-    left: -8px;
+    left: 23px;
+    direction:ltr;
 }
 
 img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
@@ -162,7 +163,7 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
   width: 40%!important;
   height: 100%!important;
   position: fixed!important;
-  top: 62px;
+  top: 65px;
   right: 0; 
   left: auto;
   bottom: 0;
@@ -175,11 +176,12 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
 
 #yad2 .view-yad2{
 	position: fixed;
-    top: 62px;
+    top: 65px;
     left: 0;
     bottom: 0;
     width: 60%;
     overflow-y: scroll;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     background: #f7f7f7;
     direction: ltr;
@@ -190,22 +192,75 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
 	top: 195px;
 }
 
+#yad2 .view-yad2 .view-content {
+    margin-top: 20px;
+}
 
 .views-field.views-field-field-yad2-loca {
     display: none;
 }
 
 
+#yad2 .views-exposed-widget.views-widget-sort-by {
+    border: none!important;
+    padding: 15px;
+}
 
-.views-exposed-form {
+#yad2 .views-exposed-form {
     text-align: right;
 }
 
-.views-exposed-widget {
+#yad2 .views-widget-filter-title input#edit-title {
+    width: 45%;
+    padding: 19px;
+    border-radius: 0;
+    border: 1px solid #DDDDDD;
+    box-shadow: none;
+}
+
+#yad2 label.control-label {
+    display: none;
+}
+
+div#edit-title-wrapper {
+    width: 50%!important;
+}
+
+#yad2 .views-exposed-form {
+    background: white;
+    padding: 15px 15px 0px 15px;
+}
+
+#yad2 .views-exposed-widget {
     width: 100%;
     height: 70px;
-    border-bottom: 1px solid #D0CCCC;
+    border-bottom: 1px solid #E4E4E4;
 }
+
+select#edit-shs-term-node-tid-depth-select-1 {
+    margin-right: 5px;
+}
+
+#yad2 div#edit-field-yad2-situ-tid-wrapper , #yad2 #edit-title-wrapper {
+    width: 50%;
+    float: right;
+    padding: 15px 0px;
+}
+
+.bef-select-as-links .form-type-bef-link {
+    background: #D1E7D2;
+    padding: 11px;
+    width: 60px;
+    text-align: center;
+    float: right;
+    margin: 0px 2px 0px 15px;
+}
+
+.bef-select-as-links a.active {
+    color: #fff;
+}
+
+
 
 .views-exposed-widget.views-submit-button , .views-exposed-widget.views-widget-sort-order{
     display: none;
@@ -223,18 +278,59 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable {
 }
 
 
+#yad2 span.a2a_svg.a2a_s__default.a2a_s_a2a {
+   background: #FF5E5E;
+    color: #fff;
+    line-height: 2!important;
+    height: 34px!important;
+    text-align: center;
+    width: 57px!important;
+    opacity: 0.9;
+
+}
+
+#yad2 span.a2a_svg.a2a_s__default.a2a_s_a2a::after { 
+    content: "שתף";
+}
+
+#yad2 .views-field.views-field-addtoany-link {
+    position: absolute;
+    top: 0px;
+}
+
+#yad2 .a2a_kit a{
+  padding:0px;
+
+}
+
+
 input#edit-title {
-    width: 35%;
     float: right;
 }
 
+.field-name-field-yad2-price fieldset , .field-name-field-yad-gallery #edit-field-yad-gallery-und{
+
+    border: none;
+    box-shadow: none;
+}
+
+#field-yad2-price-add-more-wrapper .panel-body {
+    padding: 0px;
+}
+
+#edit-field-yad-gallery-und .panel-body{
+    padding: 0px;
+}
+
+#field-yad2-price-add-more-wrapper select {
+    display: none;
+}
 
 .views-exposed-form label {
     font-weight: bold;
     float: right;
     padding: 11px 50px 0px 68px;
     font-size: 16px;
-    width: 22%;
 }
 
 
@@ -330,8 +426,10 @@ a.active {
     display: none;
 }
 
-.node-yad2-form div#geolocation-help-101-0 {
-    /*display: none;*/
+
+.node-yad2-form .panel-pane.pane-entity-form-field.pane-node-field-yad2-main-image {
+    padding: 0px 15px;
+    width: 50%;
 }
 
 .node-yad2-form span#geolocation-address-geocode-101-0, .node-yad2-form div#geolocation-remove-101-0 , .node-yad2-form #geolocation-lat-item-101-0, .node-yad2-form .geolocation-lng-item{
@@ -340,8 +438,33 @@ a.active {
 
 .node-yad2-form .panel-pane {
     float: right;
-    width: 100%;
+    /*width: 100%;*/
 }
+
+
+.pane-node-field-yad2-loca .pane-title ,.pane-node-field-yad2-contacts .pane-title , .pane-custom .pane-title{
+    background: #616161;
+    padding: 19px;
+    color: #fff;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.node-yad2-form .pane-custom  p {
+  display:none;
+}
+
+.node-yad2-form .pane-custom {
+    float: right;
+    width: 100%; 
+    padding: 0px 15px;
+}
+
+.view-id-yad2 .view-title a {
+    font-size: 17px;
+    font-weight: 600;
+}
+
 
 select {
     padding: 15px 19px;
@@ -361,14 +484,48 @@ select {
     border: 1px solid darkgrey!important;
 }
 
+
+.node-yad2-form .form-group {
+    margin-bottom: 0px!important;
+}
+
+
 textarea#edit-field-yad2-explain-und-0-value{
-	height:160px;
+   height: 50px;
 }
 
 .breadcrumb{
 	display:none;
 }
 
+.btn-success {
+    color: #fff;
+    background-color: #FF5F5E;
+    border-color: rgba(199, 177, 175, 0.62);    
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #FF5F5E;
+    border-color: rgba(199, 177, 175, 0.62);
+    opacity: 0.9;
+}
+
+.node-yad2-form .btn-success , .node-yad2-form .btn-success:hover ,.node-yad2-form .panel-pane.pane-node-form-buttons{
+     width: 100%;
+}
+   
+
+.field-name-field-yad2-tel select {
+    width: 20%;
+    float: left;
+    margin: 0px;
+}
+
+
+.field-name-field-yad2-tel input {
+    width: 76%;
+}
 
 /*register page*/
 .reg-page .row {
@@ -387,7 +544,7 @@ textarea#edit-field-yad2-explain-und-0-value{
    padding:0px!important;
 }
 
-.reg-page form#user-pass {
+.reg-page form {
     padding: 38px 0px;
 }
 
@@ -416,3 +573,53 @@ textarea#edit-field-yad2-explain-und-0-value{
 .view-id-user_active th {
     text-align: right;
 }
+
+/*ifram*/
+iframe#iframeId {
+     width: 40%!important;
+    height: 100%!important;
+    position: fixed!important;
+    top: 68px;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    z-index: 22222;
+}
+
+.jb-classifier-show-on-over{
+  display:none!important;
+  transition: opacity 250ms ease-in-out!important;
+  -webkit-user-select: none!important;
+  opacity: 0!important;
+}
+
+.feild-style{
+    color: #fff;
+    font-size: 21px;
+}
+
+.front .field-name-field-yad2-cat{
+  background: #FE5D5D;
+  border: 1px solid rgba(34, 34, 34, 0.32);
+} 
+  
+.front .field-name-field-yad2-situ{
+  background: #FE5D5D;
+  border: 1px solid rgba(34, 34, 34, 0.32);
+} 
+
+.front .field-name-field-yad2-contacts{
+  background: #FE5D5D;
+  border: 1px solid rgba(34, 34, 34, 0.32);
+}  
+
+.field-name-field-yad2-cat li {
+    float: right;
+}
+
+.help-block {
+    display: none;
+}
+
+
+

@@ -176,5 +176,5 @@
   </footer>
 <?php endif; ?>
 
-<p class="footer-yad2">dflskdlsdkfds</p>
+
 

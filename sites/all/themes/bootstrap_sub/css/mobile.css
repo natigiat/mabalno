@@ -1,0 +1,34 @@
+@media (max-width:750px) and (min-width:300px) { 
+
+
+#yad2 .views-exposed-widget {
+    height: 120px;
+}
+
+#yad2 .views-widget-filter-title input#edit-title {
+    width: 100%;
+}
+
+.views-field-field-yad2-main-image img.img-responsive {
+    width: 100%;
+}
+
+.yad2-grid{
+ padding:35px;
+}
+
+div#edit-shs-term-node-tid-depth-wrapper{
+	padding:0px;
+}
+
+
+.views-field-field-yad2-price-1{
+	bottom: 163px;
+    right: 35px;
+}
+
+#yad2 .views-field.views-field-addtoany-link {
+    top: 35px;
+}
+
+}

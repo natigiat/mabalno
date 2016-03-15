@@ -171,9 +171,10 @@
 </div>
 
 <?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
+  <footer  class="footer <?php print $container_class; ?>">
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
 
+<p class="footer-yad2">dflskdlsdkfds</p>
 

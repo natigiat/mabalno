@@ -32,6 +32,7 @@ stylesheets[all][] = css/messeges.css
 
 
 
+
 scripts[] = 'js/main.js'
 scripts[] = 'js/yad2.js'
 scripts[] = 'js/waze.js'

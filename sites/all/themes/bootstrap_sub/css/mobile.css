@@ -31,4 +31,51 @@ div#edit-shs-term-node-tid-depth-wrapper{
     top: 35px;
 }
 
+
+#yad2 .view-yad2{
+	position: static;
+    width: 100%!important;
+    background: #f7f7f7;
+    direction: ltr;
+}
+
+.panels-flexible-region-1-main_view_maba {
+   
+    width: 100%!important;
+}
+
+.panels-flexible-1 .panels-flexible-region-inside-last {
+    padding: 0px;
+}
+
+.map-maba {
+    display: none;
+}
+
+
+ul.nav li.dropdown:hover ul.dropdown-menu {
+display: block;
+}
+ul.nav li.dropdown ul.dropdown-menu {
+margin-top: 0;
+}
+
+
+.panels-flexible-region-8-map , .panels-flexible-region-8-center{
+  width:100%;
+}
+
+.node-yad2-form .panel-pane.pane-entity-form-field.pane-node-field-yad2-main-image {
+    width: 100%;
+    padding:0px!important;
+}
+
+.image-widget-data {
+    width: 100%;
+}
+
+/*.panels-flexible-region-inside{
+	padding:0px!important;
+}*/
+
 }

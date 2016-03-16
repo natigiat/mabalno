@@ -1,7 +1,7 @@
 Drupal.behaviors.mapMain = {
 	attach : function(context , settings){
 		
-        if (jQuery(".front")[0]){
+        if (jQuery(".front")[0] || jQuery(".page-node-1571")[0]){
 
 
 	        // var map = L.map('map').setView([31.79239138817601, 35.14869689941406], 13);
@@ -14,12 +14,13 @@ Drupal.behaviors.mapMain = {
 	        var getData = function(  ) {
 		        jQuery('.view-yad2').find(".view-content").find(".views-row").each(function(index, el) {
 				     
+		          
 		           //price
 		           var price = jQuery(this).find(".views-field-field-yad2-price-1").find(".field-content").text();
 		           var nid = jQuery(this).find(".views-field-nid").text();
 				   
 		           // get locations
-				   var cor = jQuery(this).find(".views-field-field-yad2-loca").text();
+				   var cor = jQuery(this).find("div[class$='loca']").text();
 				   var cor = cor.split(",");
 
 				   var one=cor[0];

@@ -3,9 +3,9 @@ Drupal.behaviors.Main = {
 		
         if (jQuery(".html")[0]){
 
-        	jQuery(".navbar-toggle").on('click', function(event) {
-        		event.preventDefault();
+        	jQuery(".navbar-toggle").click(function(event) {
         		jQuery(".main-nav").toggleClass('mobil-nav-view');
+        		return false;
         	});
 
 		}

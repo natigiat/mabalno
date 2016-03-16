@@ -97,9 +97,8 @@
     </div>
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse no-padding">
+      <div class="navbar-collapse collapse main-nav">
         <nav role="navigation">
-          <div class="pull-right">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
@@ -115,7 +114,7 @@
         </nav>
       </div>
     <?php endif; ?>
-  </div>
+ 
 </header>
 
 <div class="main-container" >

@@ -87,19 +87,18 @@
       <?php endif; ?>
 
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle navbar navbar-default" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar">-</span>
+          <span class="icon-bar">-</span>
+          <span class="icon-bar">-</span>
         </button>
       <?php endif; ?>
     </div>
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse ">
+      <div class="navbar-collapse collapse main-nav">
         <nav role="navigation">
-          <div class="pull-right">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
@@ -112,7 +111,6 @@
             <?php print render($page['navigation']); ?>
           <?php endif; ?>
           </div>
-        </nav>
       </div>
     <?php endif; ?>
   </div>

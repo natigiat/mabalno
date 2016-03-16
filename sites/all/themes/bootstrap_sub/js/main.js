@@ -1,8 +1,12 @@
-Drupal.behaviors.mapMain = {
+Drupal.behaviors.Main = {
 	attach : function(context , settings){
 		
-        if (jQuery(".front")[0]){
+        if (jQuery(".html")[0]){
 
+        	jQuery(".navbar-toggle").on('click', function(event) {
+        		event.preventDefault();
+        		jQuery(".main-nav").toggleClass('mobil-nav-view');
+        	});
 
 		}
 

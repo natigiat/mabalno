@@ -1,9 +1,6 @@
 @media (max-width:750px) and (min-width:300px) { 
 
 
-#yad2 .views-exposed-widget {
-    height: 120px;
-}
 
 #yad2 .views-widget-filter-title input#edit-title {
     width: 100%;
@@ -67,7 +64,6 @@ margin-top: 0;
 
 .node-yad2-form .panel-pane.pane-entity-form-field.pane-node-field-yad2-main-image {
     width: 100%;
-    padding:0px!important;
 }
 
 .image-widget-data {
@@ -106,5 +102,32 @@ button.navbar-toggle.navbar.navbar-default {
 .mobil-nav-view{
 	display:inline;
 }
+
+.views-exposed-form label {
+   
+    display: none;
+}
+
+.navbar-nav li {
+    border: none; 
+}
+
+.navbar-nav li a {
+    text-align: center;
+}
+
+.panels-flexible-region-8-center .panel-pane {
+    width: 100%;
+}
+
+.panels-flexible-8 .panels-flexible-region {
+    padding: 15px;
+}
+
+
+.panel-pane.pane-entity-form-field.pane-node-field-yad2-main-image {
+    padding: 15px!important;
+}
+
 
 }

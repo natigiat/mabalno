@@ -44,7 +44,8 @@ Drupal.behaviors.mapMain = {
 		 	    var nid = jQuery(this).find(".views-field-nid").text();
 		 	    console.log(nid);
 		 	
-		    });             
+		    });  
+		             
 		          
 
 			var iconclasses = {
@@ -76,6 +77,8 @@ Drupal.behaviors.mapMain = {
 			});
 
 
+		 	    
+		 
 
 
 		}

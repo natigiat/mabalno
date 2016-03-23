@@ -135,7 +135,7 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable { display: none 
     width: 40%!important;
     height: 100%!important;
     position: fixed!important;
-    top: 65px;
+    top: 61px;
     right: 0;
     left: auto;
     bottom: 0;
@@ -143,7 +143,7 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-clickable { display: none 
 .admin-menu #map { top: 195px }
 #yad2 .view-yad2 {
     position: fixed;
-    top: 65px;
+    top: 61px;
     left: 0;
     bottom: 0;
     width: 60%;
@@ -219,7 +219,7 @@ select#edit-shs-term-node-tid-depth-select-1 { margin-right: 5px }
 #yad2 span.a2a_svg.a2a_s__default.a2a_s_a2a::after { content: "שתף" }
 #yad2 .views-field.views-field-addtoany-link {
     position: absolute;
-    top: 0px;
+    top: 20px;
 }
 #yad2 .a2a_kit a { padding: 0px }
 input#edit-title { float: right }
@@ -303,7 +303,7 @@ a.active { color: #FF5A5F }
 .pane-node-field-yad2-contacts .pane-title,
 .pane-custom .pane-title {
     background: #616161;
-    padding: 19px;
+    padding: 10px;
     color: #fff;
     font-size: 20px;
     margin: 0px;
@@ -349,6 +349,11 @@ textarea#edit-field-yad2-explain-und-0-value { height: 50px }
     margin: 0px;
 }
 .field-name-field-yad2-tel input { width: 76% }
+#edit-field-yad2-contacts-und-0-field-yad2-tel-pre-und {
+    width: 24%;
+    float: left;
+    margin: 0;
+}
 /*register page*/
 .reg-page .row { margin-top: 110px }
 .reg-page li { float: right }
@@ -369,6 +374,16 @@ textarea#edit-field-yad2-explain-und-0-value { height: 50px }
 }
 .view-id-user_active .views-row { padding: 20px }
 .view-id-user_active th { text-align: right }
+
+
+
+.views-field-field-yad2-name,
+.views-field-field-yad2-tel-pre,
+.views-field-field-yad2-tel
+{
+display:none;
+}
+
 /*ifram*/
 iframe#iframeId {
     width: 40%!important;
@@ -412,7 +427,7 @@ nav {
 
 
 .navbar-nav li {
-    padding: 0px;
+       padding: 0px 20px;
 }
 
 .navbar-nav li a {
@@ -433,4 +448,123 @@ img {
 
 input, textarea {
   max-width:100%
+}
+
+.box-view {
+    margin: auto;
+    width: 260px;
+    height:300px;
+    padding: 10px;
+    background: #fff;
+    position: absolute;
+    bottom: 50px;
+}
+
+.view-yad2 .views-field-field-yad-gallery{
+    display:none;
+}
+
+
+
+
+
+.field-slideshow-controls a.next{
+    font-size: 22px;
+    color: white;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    z-index: 222;
+    display : block;
+}
+
+.field-slideshow-controls a.prev{
+    font-size: 22px;
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    z-index: 222;
+    display : block;
+}
+
+.view-yad2 .views-field-privatemsg-link{display:none;}
+.views-field.views-field-privatemsg-link {
+    float: right;
+    background: #E9E6E1;
+    width: auto;
+    padding: 5px 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.views-field.views-field-field-yad2-situ {
+    float: right;
+    width: auto;
+    margin-left: 6px;
+    background: #B9B9B9;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.views-row{
+   padding: 20px 13px; 
+}
+
+.box-price {
+    background-color: rgba(0, 0, 0, 0.99);
+    padding: 10px;
+    color: #fff;
+    bottom: 85px;
+    right: 15px;
+    padding: 7px 10px;
+    opacity: 0.7;
+    position: absolute;
+    font-size: 20px;
+    top: 90px;
+    right: 10px;
+    height: 41px;
+}
+
+.box-title {
+    color: #565A5C;
+    font-size: 15px;
+    padding: 10px 0px;
+}
+
+.pane-node-form-publishing , .plupload_file_size {
+    display: none;
+}
+
+select#phone1Prefix {
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid darkgrey;
+}
+
+
+button#edit-field-yad-gallery-und-0-filefield-plupload-upload-button {
+    width: 100%;
+    background: rgb(223, 223, 223);
+}
+
+.panels-flexible-region-last h4 {
+    font-size: 14px;
+}
+
+
+.box-view div {
+    padding: 0;
+    text-align: right;
+}
+
+.box-number {
+    background: #F7F5E9;
+    text-align: center!important;
+}
+
+.box-name {
+    background: #E5E2DB;
+    text-align: center!important;
 }

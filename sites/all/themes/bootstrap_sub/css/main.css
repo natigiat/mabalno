@@ -1,0 +1,139 @@
+.page-user-login legend.panel-heading {
+    display: none;
+}
+
+.page-user-login .panel-body {
+    padding: 0px!important;
+}
+
+.page-user-login fieldset {
+    border: none;
+}
+
+
+.page-user-login .row {
+	margin:0px!important;
+}
+
+
+.page-user-login .form-actions .form-submit {
+    color: #fff;
+    width:100%;
+    background-color: #FF5F5E;
+    border-color: rgba(199, 177, 175, 0.62);
+}
+
+.page-user-login .progress {
+    margin: 0px;
+    box-shadow: none;
+}
+
+.form-item-pass-pass1, .form-item-pass-pass2 {
+    float: right;
+    padding:0px;
+}
+.form-item-pass-pass1 , .form-item-pass-pass2{
+	width:100%;
+}
+
+.form-item-pass-pass1 input ,.form-item-pass-pass2 input{
+	width:30%;
+}
+
+.page-user-login .help-block  li {
+    float: right;
+    width: 100%;
+}
+
+div#edit-profile-main-field-user-tele {
+    width: 80%;
+    float: right;
+}
+
+div#edit-profile-main-field-user-pre-tel {
+    float: left;
+    width: 20%;
+}
+
+.image-widget-data button[value="העלאה"] {
+    display: none;
+}
+
+
+.image-widget-data {
+    width: 100%;
+}
+
+.image-widget-data .input-group {
+    width: 100%;
+}
+
+.image-widget-data span.input-group-btn {
+    width: 0;
+}
+.image-widget-data .file, .file-size{
+	display: none;
+}
+
+ul#edit-field-yad-gallery-und-0-filefield-plupload-pud_filelist {
+    height: 108px;
+}
+
+.badge-notify {
+    background: #FF5A5F;
+    position: absolute!important;
+    top: 0px;
+    right: 0;
+    height: 17px;
+    width: 23px;
+    margin-top: 14px;
+}
+
+.secondary .glyphicon-comment {
+    font-size: 25px;
+    color: #C1C1C1;
+}
+
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+}
+
+.messeges-number {
+    font-size: 9px;
+    line-height: 2;
+    color: #fff;
+}
+
+div.messages {
+    clear: both;
+}
+
+.page-user ul.tabs--primary {
+    display: none;
+}
+
+.page-user .pane-user-name {
+    background: #FF5D5E;
+    padding: 10px 0px;
+    text-align: center;
+    color: #fff;
+}
+
+.page-user .panel-separator {
+    margin: 0px!important;
+}
+
+.page-user .pane-user-last-access {
+    background: #C1C1C1;
+    text-align: center;
+    color: #fff;
+}
+
+.page-user .pane-title {
+    margin: 0px;
+}
+
+.panels-flexible-region-first .pane-title {
+    padding: 20px 10px;
+}

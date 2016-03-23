@@ -2,15 +2,23 @@
 text-align: right;
 }
 
-.messages ul.action-links {
+.page-messages ul.action-links {
     display: none;
 }
 
-.messages select {
+.page-messages select {
     width: 30%;
     float: right;
 }
 
 div#privatemsg-list-form {
     padding: 25px 0px;
+}
+
+.form-item-recipient {
+    display: none;
+}
+
+.page-messages .table-responsive {
+    width: 100%;
 }

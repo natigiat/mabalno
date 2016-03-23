@@ -4,19 +4,27 @@ Drupal.behaviors.mapMain = {
         if (jQuery(".front")[0] || jQuery(".page-node-1571")[0]){
 
 
-	        // var map = L.map('map').setView([31.79239138817601, 35.14869689941406], 13);
-	        
+	        //fix price text 
+            jQuery(".views-field-field-yad2-price-1").each(function(index, el) {
+            	var price = jQuery(this).text();
+            	price = price.trim();
+            	price = price.split(".")[0];
+            	jQuery(this).find(".field-content").text("₪" + price  );
+            	
+            });
+
+	        //set map container
 	        jQuery("#map-container").html('<div id="map" class="hidden-xs" style="position: absolute; height: 100%; width: 100%;"></div>');
 	        
 	        var data = [];
-	        //get data from view details
-	        
-	        var getData = function(  ) {
+	        //get data from view details 
+	        var getData = function( ) {
 		        jQuery('.view-yad2').find(".view-content").find(".views-row").each(function(index, el) {
 				     
 		          
 		           //price
 		           var price = jQuery(this).find(".views-field-field-yad2-price-1").find(".field-content").text();
+		           price = price.trim();
 		           var nid = jQuery(this).find(".views-field-nid").text();
 				   
 		           // get locations
@@ -34,15 +42,6 @@ Drupal.behaviors.mapMain = {
 				   // console.log( one ,  two);
 				   jQuery(this).find('.waze').attr('latitude' , one);
 				   jQuery(this).find('.waze').attr('longitude', two);
-
-				   // console.log(one);
-				   // if(one.length < 3){
-				   // 	 console.log("in");
-				   // 	 one = 31.79239138817601;
-				   // 	 two = 35.14869689941406;
-				   // 	 prcie = "אין פריטים"
-				   // 	 data.push({iconclass: price, lat: one, lon: two});
-				   // }
 
 		           data.push({iconclass: price, nid:nid , lat: one, lon: two});
 		          
@@ -64,7 +63,7 @@ Drupal.behaviors.mapMain = {
 			var map = new L.Map('map', {
 			  center: [data[0].lat,data[0].lon],
 			  zoom: 13,
-			  minZoom: 7
+			  minZoom: 9
 			});
 
 			L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png').addTo(map);
@@ -148,12 +147,82 @@ Drupal.behaviors.mapMain = {
            	
             });
 
-			// map.on('zoomend', onMapzoom);
+			jQuery('.leaflet-tile , .icon').on('click', function(event) {
+				jQuery('.box-view').remove();
+			});
 
-   //          function onMapzoom(e) {
-	  //         var zoom = map.getZoom();
-   //            console.log(zoom);
-	  //       }
+			jQuery('.view-yad2').on('hover', function(event) {
+				jQuery('.box-view').remove();
+			});
+
+			
+            
+
+			
+            //this event after clicking on icon in map, this will center the map and show info
+			jQuery('.icon').each(function(index, el) {
+				jQuery(this).on("click", function(){
+			        
+			        // var nid and icon
+                    var icon = jQuery(this);
+			        var nid = jQuery(this).attr("nid");
+			        nid = nid.trim();
+
+		 	        
+		 	        jQuery('.view-yad2').find(".view-content").find(".views-row").each(function(index, el) {
+                       
+		 	        	var viewNid = jQuery(this).find(".views-field-nid").text();
+		 	        	viewNid = viewNid.trim();
+                       
+
+		 	        	if(nid == viewNid) {
+		 	        		nImage = jQuery(this).find(".views-field-field-yad2-main-image").find("img").attr('src');
+		 	        		nSlider = jQuery(this).find(".views-field-field-yad-gallery");
+		 	        		nTitle = jQuery(this).find(".views-field-title").find('a').text();;
+		 	        		nPrice = jQuery(this).find(".views-field-field-yad2-price-1").find('.field-content').text();
+		 	        		nName = jQuery(this).find(".views-field-field-yad2-name").find('.field-content').text();
+		 	        		nTelPre = jQuery(this).find(".views-field-field-yad2-tel-pre").find('.field-content').text();
+		 	        		nTel = jQuery(this).find(".views-field-field-yad2-tel").find('.field-content').text();
+
+
+		 	        		// center map
+		                    var cor = jQuery(this).find(".views-field-field-yad2-loca").text();
+						    var cor = cor.split(",");
+
+						    var one=cor[0];
+						    var two=cor[1];
+						    one = one.replace("Geolocation", "");
+						    one = one.replace("is", "");
+
+						    one = one.replace(/\s+/g, '');
+						    two = two.replace(/\s+/g, '');
+		                    map.panTo(new L.LatLng(one, two));
+
+
+		 	        		if (nSlider.find('div').length > 3){
+		 	        			nSliderHtml = jQuery(this).find(".views-field-field-yad-gallery").html();
+		 	        			icon.after('<div class="box-view"><div class="box-price">'+nPrice+'</div><div class="box-details"><div class="box-title">'+nTitle+'</div><div class="box-name col-sm-6 pull-right">'+nName+'</div><div class="box-number col-sm-6 pull-right">'+nTelPre+'-'+nTel+'</div></div></div>');
+		 	        			jQuery(this).find(".views-field-field-yad-gallery").prependTo('.box-view');
+		 	        			jQuery(this).find(".views-field-privatemsg-link").clone().appendTo('.box-view');
+		 	        		}else{
+		 	        			icon.after('<div class="box-view"><img class="img-responsive" src="'+nImage+'" width="100%" height="240px" alt=""><div class="box-details"><div class="box-price">'+nPrice+'</div><div class="box-title">'+nTitle+'</div><div class="box-name col-sm-6 pull-right">'+nName+'</div><div class="box-number col-sm-6 pull-right">'+nTelPre+'-'+nTel+'</div></div></div>');
+		 	        			jQuery(this).find(".views-field-privatemsg-link").clone().appendTo('.box-view');
+		 	        		}
+		 	        		
+		 	        		
+		 	        	}
+                       
+		 	        });
+			    });
+
+                jQuery(this).on("blur", function(){
+                	jQuery('.box-view').remove();
+                });
+
+			});
+
+			
+			
 
 
 		}

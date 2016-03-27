@@ -9,7 +9,7 @@ Drupal.behaviors.mapMain = {
             	var price = jQuery(this).text();
             	price = price.trim();
             	price = price.split(".")[0];
-            	price = price.match(/\d+/)[0];
+            	price = price.replace(/\D+/g, '');
           	    
                   jQuery(this).find(".field-content").text('3');
                   jQuery(this).find(".field-content").text( "₪"+price );

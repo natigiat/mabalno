@@ -137,3 +137,8 @@ div.messages {
 .panels-flexible-region-first .pane-title {
     padding: 20px 10px;
 }
+
+.page-user .pane-tagclouds {
+    margin-top: 29px;
+    text-align: center;
+}

@@ -9,11 +9,10 @@ Drupal.behaviors.mapMain = {
             	var price = jQuery(this).text();
             	price = price.trim();
             	price = price.split(".")[0];
-            	if (jQuery(this).find(".field-content").text().indexOf("₪") >= 0){
-                  
-            	}else{
-            	   jQuery(this).find(".field-content").text("₪" + price  );
-            	}
+            	
+          	    
+                  jQuery(this).find(".field-content").replaceWith( "₪"+price );
+            	
             	
             	
             });

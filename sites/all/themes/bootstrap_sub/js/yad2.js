@@ -153,11 +153,11 @@ Drupal.behaviors.mapMain = {
             });
 
 			jQuery('.leaflet-tile , .icon').on('click', function(event) {
-				jQuery('.box-view').remove();
+				jQuery('.box-view , .box-view-gallery').remove();
 			});
 
 			jQuery('.view-yad2').on('hover', function(event) {
-				jQuery('.box-view').remove();
+				jQuery('.box-view , .box-view-gallery').remove();
 			});
 
 			
@@ -210,8 +210,8 @@ Drupal.behaviors.mapMain = {
 		 	        			jQuery(this).find(".views-field-field-yad-gallery").prependTo('.box-view');
 		 	        			jQuery(this).find(".views-field-privatemsg-link").clone().appendTo('.box-view');
 		 	        		}else{
-		 	        			icon.after('<div class="box-view"><img class="img-responsive" src="'+nImage+'" width="100%" height="240px" alt=""><div class="box-details"><div class="box-price">'+nPrice+'</div><div class="box-title">'+nTitle+'</div><div class="box-name col-sm-6 pull-right">'+nName+'</div><div class="box-number col-sm-6 pull-right">'+nTelPre+'-'+nTel+'</div></div></div>');
-		 	        			jQuery(this).find(".views-field-privatemsg-link").clone().appendTo('.box-view');
+		 	        			icon.after('<div class="box-view-gallery"><img class="img-responsive" src="'+nImage+'" width="100%" height="240px" alt=""><div class="box-details"><div class="box-price">'+nPrice+'</div><div class="box-title">'+nTitle+'</div><div class="box-name col-sm-6 pull-right">'+nName+'</div><div class="box-number col-sm-6 pull-right">'+nTelPre+'-'+nTel+'</div></div></div>');
+		 	        			jQuery(this).find(".views-field-privatemsg-link").clone().appendTo('.box-view-gallery');
 		 	        		}
 		 	        		
 		 	        		

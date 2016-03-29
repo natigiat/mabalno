@@ -42,3 +42,41 @@ Drupal.behaviors.Main = {
   };
 
 
+  Drupal.behaviors.nodeType = {
+    attach: function (context, settings) {
+
+      if (jQuery(".node-type-yad2")[0]){
+        
+        // fix slideshow display
+        jQuery(".field-slideshow-1").hide();
+        jQuery("#field-slideshow-1-wrapper").click(function(event) {
+        	jQuery(".field-slideshow-1").show();
+        })
+
+        jQuery(".field-collection-item-field-yad2-contacts").append('<div id="bt"><div id="bt_wrapper"> <div class="bt_wrap bt_phone"> <div class="box"> <i class="icon fa fa-phone"></i> <i class="icon2 fa fa-phone"></i> </div> </div> <div class="bt_wrap bt_messages"> <div class="box"> <i class="icon fa fa-envelope"></i> <i class="icon2 fa fa-envelope"></i> </div> </div> <div class="bt_wrap bt_social"> <div class="box"> <i class="icon fa fa-share-square"></i> <i class="icon2 fa fa-share-square"></i> </div> </div> </div></div>');
+        jQuery(".field-collection-item-field-yad2-contacts").find(".content").hide();
+        
+        jQuery(".bt_phone").click(function(event) {
+        	jQuery(".field-collection-item-field-yad2-contacts").find(".content").show();
+        });
+
+
+        jQuery('.panels-flexible-region-first').find('.pane-addtoany').css({
+		    position: "absolute",
+		    width: "100%",
+		    height: "100%",
+		    left: 0,
+		    width:"100%",
+		    top: 0,
+		    zIndex: 1000000,  // to be on the safe side
+		    background: "url(/img/loading.gif) no-repeat 50% 50%"
+		}).appendTo(jQuery(".bt_social").css("position", "relative"));
+        
+      }
+   
+      
+    }
+  };
+
+
+

@@ -480,7 +480,9 @@ input, textarea {
     text-align: center!important;
 }
 
-
+.views-field-field-yad2-main-image img.img-responsive {
+    width: 100%;
+}
 
 
 .field-slideshow-controls a.next{

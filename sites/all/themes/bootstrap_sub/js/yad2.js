@@ -137,20 +137,20 @@ Drupal.behaviors.mapMain = {
 		    }).resize(); // This will simulate a resize to trigger the initial run.
           
 
-            //show page view ifram on map
-            //
-            jQuery('.views-field-title').on('click', function(event) {
-            	event.preventDefault();
-            	var nid = jQuery(this).find('a').attr('href');
-            	console.log(nid);
-            	jQuery('#map').css('display', 'none');
-            	if(jQuery('#iframeId').length){ 
-                   jQuery('#iframeId').attr('src', nid);
-            	}else{
-            	   jQuery('.control-label').append(' <iframe frameborder="0" id="iframeId" name="iframeId" src="'+nid+'" ></iframe>');
-            	}
+            // //show page view ifram on map
+            // //
+            // jQuery('.views-field-title').on('click', function(event) {
+            // 	event.preventDefault();
+            // 	var nid = jQuery(this).find('a').attr('href');
+            // 	console.log(nid);
+            // 	jQuery('#map').css('display', 'none');
+            // 	if(jQuery('#iframeId').length){ 
+            //        jQuery('#iframeId').attr('src', nid);
+            // 	}else{
+            // 	   jQuery('.control-label').append(' <iframe frameborder="0" id="iframeId" name="iframeId" src="'+nid+'" ></iframe>');
+            // 	}
            	
-            });
+            // });
 
 			jQuery('.leaflet-tile , .icon').on('click', function(event) {
 				jQuery('.box-view , .box-view-gallery').remove();

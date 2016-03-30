@@ -292,15 +292,20 @@ a.active { color: #FF5A5F }
     width: 50%;
 }
 .node-yad2-form span#geolocation-address-geocode-101-0,
+.geolocation-address,
 .node-yad2-form div#geolocation-remove-101-0,
+.page-node-add .geolocation-remove,
+.page-node-add .geolocation-lat-item,
 .node-yad2-form #geolocation-lat-item-101-0,
-.node-yad2-form .geolocation-lng-item { display: none!important }
+.page-node-add .geolocation-lng-item { display: none!important }
 .node-yad2-form .panel-pane {
     float: right;
     /*width: 100%;*/
 }
 .pane-node-field-yad2-loca .pane-title,
+.pane-node-field-mesira-loca .pane-title,
 .pane-node-field-yad2-contacts .pane-title,
+.pane-node-field-mesira-contacts .pane-title,
 .pane-custom .pane-title {
     background: #616161;
     padding: 10px;
@@ -341,8 +346,10 @@ textarea#edit-field-yad2-explain-und-0-value { height: 50px }
     opacity: 0.9;
 }
 .node-yad2-form .btn-success,
+.page-node-add .btn-success,
 .node-yad2-form .btn-success:hover,
 .node-yad2-form .panel-pane.pane-node-form-buttons { width: 100% }
+
 .field-name-field-yad2-tel select {
     width: 20%;
     float: left;
@@ -387,13 +394,14 @@ display:none;
 /*ifram*/
 iframe#iframeId {
     width: 40%!important;
-    height: 100%!important;
+    height: 900px!important;
     position: fixed!important;
     top: 68px;
     right: 0;
     left: auto;
     bottom: 0;
     z-index: 22222;
+    clear:both;
 }
 .jb-classifier-show-on-over {
     display: none!important;

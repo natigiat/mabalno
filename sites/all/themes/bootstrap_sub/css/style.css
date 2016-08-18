@@ -181,8 +181,10 @@ div#edit-title-wrapper { width: 50%!important }
 }
 select#edit-shs-term-node-tid-depth-select-1 { margin-right: 5px }
 #yad2 div#edit-field-yad2-situ-tid-wrapper,
+#edit-field-field-mesira-situ-tid-wrapper,
+#edit-field-field-mesira-situ-tid-wrapper,
 #yad2 #edit-title-wrapper {
-    width: 50%;
+    width: 50%!important;
     float: right;
     padding: 15px 0px;
 }
@@ -488,7 +490,8 @@ input, textarea {
     text-align: center!important;
 }
 
-.views-field-field-yad2-main-image img.img-responsive {
+.views-field-field-yad2-main-image img.img-responsive,
+.views-field-field-mesira-main-image img {
     width: 100%;
 }
 
@@ -531,6 +534,20 @@ input, textarea {
     padding: 3px 10px;
     text-align: center;
     font-size: 10px;
+}
+
+.label-gray{
+    float: right;
+    width: auto;
+    margin-left: 6px;
+    background: #B9B9B9;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.no-display{
+    display: none;
 }
 
 .views-row{

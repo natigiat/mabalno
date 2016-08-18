@@ -1,7 +1,7 @@
 Drupal.behaviors.mapMain = {
 	attach : function(context , settings){
 		
-        if (jQuery(".front")[0] || jQuery(".page-node-1571")[0]){
+        if (jQuery(".front")[0] || jQuery(".page-node-1571")[0] || jQuery(".page-node-1579")[0]){
 
 
 	        //fix price text 
@@ -71,7 +71,7 @@ Drupal.behaviors.mapMain = {
 			  minZoom: 9
 			});
 
-			L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png').addTo(map);
+			MQ.mapLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png?access_token={pk.eyJ1IjoibmF0aWdpYXQiLCJhIjoiY2lsZ2FkMWJ4MDA0NXZqbTRteWVka20waSJ9.Hv2jNRK5NIb22nduCc09BA}').addTo(map);
 
             
 
@@ -104,7 +104,7 @@ Drupal.behaviors.mapMain = {
 
 
 		 	    // get locations
-				   var cor = jQuery(this).find(".views-field-field-yad2-loca").text();
+				   var cor = jQuery(this).find("div[class$='loca']").text();
 				   var cor = cor.split(",");
 
 				   var one=cor[0];
@@ -191,7 +191,7 @@ Drupal.behaviors.mapMain = {
 
 
 		 	        		// center map
-		                    var cor = jQuery(this).find(".views-field-field-yad2-loca").text();
+		                    var cor = jQuery(this).find("div[class$='loca']").text();
 						    var cor = cor.split(",");
 
 						    var one=cor[0];
